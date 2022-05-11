@@ -1,4 +1,4 @@
-# My C++ and C language project boilerplate in Windows
+# My CPP and C language project boilerplate in Windows
 Master branch is targeting c++ project.
 ## editor setup
 My editor is using neovim Windows with clangd lsp server. My step preparing my editor is:
@@ -10,5 +10,5 @@ My editor is using neovim Windows with clangd lsp server. My step preparing my e
 
 ## clangd setup
 My config mainly using compile_flags.txt for clangd. the flag is:
-- `-lstdc++`, this flag is used to notify clang that this c++ project and include c++ header. If this flag is removed in c++ project or file .cpp, clang only using c header. example:remove this flag, clangd error cant find include<iostream>. Remove this flag if using c based project.
+- `-xc++`, this flag is used to notify clang that this c++ project and include c++ header. If this flag is removed in c++ project or file .cpp, clang only using c header. example:remove this flag, clangd error cant find include<iostream>. Remove this flag if using c based project.
 - `-target x86_64-pc-windows-gnu`, this flag is used to notify clang that this project is using mingw 64bit windows. Removing this flag, clang can't find your include header.
